@@ -112,7 +112,7 @@ Method 5 (Best Performing) - Similarity matrices on graph + Spectral clustering
     visualizations is shown in fig. 1 (dimensions are 1829x1829, white
     corresponds to 1 and grey to 0):
 
-    ![Adjacency Matrix](adMat.png "fig:") [Fig1: Adjacency Matrix(2a)]
+    ![Adjacency Matrix](documentation/adMat.png "fig:") [Fig1: Adjacency Matrix(2a)]
 
 5.  For Spectral clustering, we implemented each step of algorithm
     separately and tried to visualize two dimensions at a time in the
