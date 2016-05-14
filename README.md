@@ -1,6 +1,7 @@
 # CrowdFundingML - A inclass Kaggle competition
 
 ## Detailed report
+[Click Here!!](https://github.com/arjunjauhari/crowdfundingML-kaggle/blob/master/writeup.pdf)
 
 ## Initial Submissions
 
