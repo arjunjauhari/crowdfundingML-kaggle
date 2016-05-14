@@ -112,7 +112,7 @@ Method 5 (Best Performing) - Similarity matrices on graph + Spectral clustering
     visualizations is shown in fig. 1 (dimensions are 1829x1829, white
     corresponds to 1 and grey to 0):
 
-    ![Adjacency Matrix](documentation/adMat.png "fig:")
+    ![alt text](documentation/adMat.png "fig")
     *Fig1: Adjacency Matrix(2a)*
 
 5.  For Spectral clustering, we implemented each step of algorithm
@@ -120,10 +120,8 @@ Method 5 (Best Performing) - Similarity matrices on graph + Spectral clustering
     spectral embedding which we get through different similarity
     matrices. Few of those scatter plots are shown below in fig. 2 -
 
-    ![Spectral embedding pairwise plots for different
-    dimensions](documentation/joined.png "fig:")
-    *Fig1: Spectral embedding pairwise
-    plots for different dimensions*
+    ![alt text](documentation/joined.png "fig")
+    *Fig2: Spectral embedding pairwise plots for different dimensions*
 
     From these plots we can see that the projects start getting
     separated only in high dimensional space, but still it would be a
@@ -274,7 +272,7 @@ reduced the dimensionality of the data using PCA. Then we used KMeans
 with explicit centroids. This method seemed to have performed the best
 out of all methods that we tried.
 
-![PCA sweep](documentation/PCAsweep.png "fig:")
+![alt text](documentation/PCAsweep.png "fig")
 *Fig3: PCA sweep*
 
 As shown in the graph in fig. 3, we sweeped several values for
