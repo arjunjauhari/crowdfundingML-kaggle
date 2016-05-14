@@ -1,4 +1,4 @@
-Introduction {#introduction .unnumbered}
+Introduction
 ============
 
 The report is organized into two sections - Task 1 and Task 2. For task
@@ -8,10 +8,10 @@ performing method is method 6.\
 All of our methods were implemented in Python using the scikit-learn
 package (version 0.17.1).\
 
-Task 1 {#task-1 .unnumbered}
+Task 1
 ======
 
-Method 1 - All projects are labeled successful {#method-1---all-projects-are-labeled-successful .unnumbered}
+Method 1 - All projects are labeled successful
 ----------------------------------------------
 
 We made a submission with all predictions set to 1 to see how many of
@@ -22,7 +22,7 @@ of successful and unsuccessful projects are not really equal.\
 
 -   No. of successful projects is around 58%
 
-Method 2 - KMeans on social and evolution data {#method-2---kmeans-on-social-and-evolution-data .unnumbered}
+Method 2 - KMeans on social and evolution data
 ----------------------------------------------
 
 Next, we tried a simple KMeans on the social data with random
@@ -33,7 +33,7 @@ media response.\
 
 -   It seems like the assumption was not correct for this dataset.
 
-Method 3 - Graph donor threshold {#method-3---graph-donor-threshold .unnumbered}
+Method 3 - Graph donor threshold
 --------------------------------
 
 We then counted the number of donors each project had from the backer
@@ -55,7 +55,7 @@ following:\
     and whether it was successful. There are a few projects that were
     successful even with a single donor.
 
-Method 4 - Random projection on graph + Spectral clustering {#method-4---random-projection-on-graph-spectral-clustering .unnumbered}
+Method 4 - Random projection on graph + Spectral clustering
 -----------------------------------------------------------
 
 We cleaned the graph by removing all the donors who did not make any
@@ -76,7 +76,7 @@ spectral clustering using the RBF kernel. We got a score of about  51%.\
     expected with probability less than 1, we should have tried multiple
     instances of projection.
 
-Method 5 (Best Performing) - Similarity matrices on graph + Spectral clustering {#method-5-best-performing---similarity-matrices-on-graph-spectral-clustering .unnumbered}
+Method 5 (Best Performing) - Similarity matrices on graph + Spectral clustering
 -------------------------------------------------------------------------------
 
 1.  We used the same cleaned graph as in the previous method. In
@@ -179,12 +179,12 @@ can take it out of that local minima:
 
 3.  Some of the given semi-supervised labels may be outliers.
 
-Task 2 {#task-2 .unnumbered}
+Task 2
 ======
 
 All the methods on task 2 are performed on the description data.\
 
-Method 1 - PCA + Spectral clustering {#method-1---pca-spectral-clustering .unnumbered}
+Method 1 - PCA + Spectral clustering
 ------------------------------------
 
 We performed PCA on the description data by calculating the top 1200
@@ -195,7 +195,7 @@ the RBF kernel. We tried two different gamma values for the RBF kernel
 
 -   PCA may not really work well on sparse matrices.
 
-Method 2 -  Random Projection + KMeans {#method-2---random-projection-kmeans .unnumbered}
+Method 2 -  Random Projection + KMeans
 --------------------------------------
 
 We then used Random Projection to reduce the dimensionality of the
@@ -212,7 +212,7 @@ initialized centroids. This yielded a score of  14.5%.\
     is more stable from run to run and wouldn’t give us much choice in
     assigning the labels.
 
-Method 3 - Random Projection + Gaussian Mixture Model {#method-3---random-projection-gaussian-mixture-model .unnumbered}
+Method 3 - Random Projection + Gaussian Mixture Model
 -----------------------------------------------------
 
 We then tried Random Projection to 1200 dimensions followed by GMM
@@ -221,7 +221,7 @@ clustering with random initializations. This gave us a score of  13%.\
 
 -   Again, here we had to choose labels arbitrarily.
 
-Method 4 - Similarity matrices + Spectral embedding + Gaussian Mixture Model {#method-4---similarity-matrices-spectral-embedding-gaussian-mixture-model .unnumbered}
+Method 4 - Similarity matrices + Spectral embedding + Gaussian Mixture Model
 ----------------------------------------------------------------------------
 
 We then tried constructing different similarity matrices as follows.
@@ -244,7 +244,7 @@ eigenvectors and value of gamma in RBF kernel).\
     similarity matrix we might lose that variation as large number of
     similar features might just mask off those few important features.
 
-Method 5 - KMeans with centroids given explicitly {#method-5---kmeans-with-centroids-given-explicitly .unnumbered}
+Method 5 - KMeans with centroids given explicitly
 -------------------------------------------------
 
 We calculated the centroids with the mean of 3 projects given for each
@@ -259,7 +259,7 @@ well as we expected, with an accuracy of  32%.\
     initialization, we force it to converge to those minima that are
     close to global minima.
 
-Method 6 (Best) - PCA + KMeans with centroids given explicitly {#method-6-best---pca-kmeans-with-centroids-given-explicitly .unnumbered}
+Method 6 (Best) - PCA + KMeans with centroids given explicitly
 --------------------------------------------------------------
 
 We performed the same method as before with a slight tweak. We first
