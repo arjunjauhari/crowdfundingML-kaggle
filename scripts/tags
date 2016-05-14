@@ -1,0 +1,172 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+K	prunegraph2.py	/^K = 100$/;"	v
+K	task2.py	/^K = 1200$/;"	v
+K	task2.py	/^K=20$/;"	v
+N	new.py	/^N = 10$/;"	v
+N2	new.py	/^N2 = 10$/;"	v
+WRp	prunegraph2.py	/^WRp = np.sign(np.random.randn(d,K))\/np.sqrt(K)  # dxK$/;"	v
+WRp	task2.py	/^WRp = np.sign(np.random.randn(d,K))\/np.sqrt(K)  # dxK$/;"	v
+X	a1.py	/^X = coo_matrix((val, (row, col)), shape=(1829,8000)).todense() # description$/;"	v
+X	task2.py	/^X = coo_matrix((val, (row, col)), shape=(1829,8000)).todense() # description$/;"	v
+Y	new.py	/^Y = eigvec[:,[0,1]]$/;"	v
+Y	t3_autose.py	/^    Y = eigvec[:,[k-2,k-1]]#[:,1:100]$/;"	v
+Y	task2.py	/^    Y = X[:,[2*k,2*k+1]]#[:,1:100]$/;"	v
+YPca	task2.py	/^YPca = np.dot(YRp-muXPca, wXPca.T)    # NxK$/;"	v
+YRp	prunegraph2.py	/^YRp = np.dot(pruneG, WRp)     # NxK$/;"	v
+YRp	task2.py	/^YRp = np.dot(X, WRp)     # NxK$/;"	v
+_blob	hinton.py	/^def _blob(x,y,area,colour):$/;"	f
+adMat	t1.py	/^adMat = np.zeros((numProj,numProj))$/;"	v
+adMat	t2_hack.py	/^adMat = np.zeros((numProj,numProj))$/;"	v
+adMat	t3_autose.py	/^adMat = np.zeros((numProj,numProj))$/;"	v
+adjMat	new.py	/^adjMat = (adjMat + adjMat.T)\/2$/;"	v
+adjMat	new.py	/^adjMat = adjMat.astype(int)$/;"	v
+adjMat	new.py	/^adjMat = np.kron(np.eye(3),adjMat)$/;"	v
+adjMat	new.py	/^adjMat = np.random.rand(N,N)$/;"	v
+adjMat2	new.py	/^adjMat2 = adjMat2.astype(int)$/;"	v
+adjMat2	new.py	/^adjMat2 = np.zeros((N2,N2))$/;"	v
+adjRBF	prunegraph2.py	/^adjRBF = sklearn.metrics.pairwise.pairwise_kernels(YRp,metric='rbf',gamma=0.3)$/;"	v
+aff	printadj.py	/^aff = np.genfromtxt('aff.csv', delimiter = ',')$/;"	v
+bins	count_donors.py	/^bins = [0,10,20,30,40,50,60,70,80,90,100]$/;"	v
+cdonors	count_donors.py	/^cdonors = cdonors.astype(int)$/;"	v
+cdonors	count_donors.py	/^cdonors = np.zeros(numProj)$/;"	v
+change_labels	task2.py	/^def change_labels(label, new_labels):$/;"	f
+col	a1.py	/^col = description[:,1]$/;"	v
+col	prunegraph.py	/^col = data[:,1]$/;"	v
+col	prunegraph2.py	/^col = graph[:,1]$/;"	v
+col	t1.py	/^col = graph[:,1]$/;"	v
+col	t2_hack.py	/^col = graph[:,1]$/;"	v
+col	t3_autose.py	/^col = graph[:,1]$/;"	v
+col	task2.py	/^col = description[:,1]$/;"	v
+cumper	count_donors.py	/^cumper = (n\/float(numProj))*100$/;"	v
+d	prunegraph2.py	/^d = pruneG.shape[1]$/;"	v
+d	task2.py	/^d = np.shape(X)[1]$/;"	v
+data	prunegraph.py	/^data = np.genfromtxt('graph.csv', delimiter = ',')$/;"	v
+description	a1.py	/^description = np.genfromtxt('..\/data\/description.csv', delimiter = ',')$/;"	v
+description	task2.py	/^description = np.genfromtxt('..\/data\/description.csv', delimiter = ',')$/;"	v
+diagMat	new.py	/^diagMat = np.diag(adjMat.sum(axis=0))$/;"	v
+diagMatinv	new.py	/^diagMatinv = la.fractional_matrix_power(diagMat,-0.5)$/;"	v
+donor_donations	prunegraph2.py	/^donor_donations 	= graph_sparse.sum(0).getA1()$/;"	v
+donor_donations	prunegraph2.py	/^donor_donations = 0$/;"	v
+donor_donations	t1.py	/^donor_donations 	= graph_sparse.sum(0).getA1()$/;"	v
+donor_donations	t1.py	/^donor_donations = 0$/;"	v
+donor_donations	t2_hack.py	/^donor_donations 	= graph_sparse.sum(0).getA1()$/;"	v
+donor_donations	t2_hack.py	/^donor_donations = 0$/;"	v
+donor_donations	t3_autose.py	/^donor_donations 	= graph_sparse.sum(0).getA1()$/;"	v
+donor_donations	t3_autose.py	/^donor_donations = 0$/;"	v
+donor_idx	prunegraph2.py	/^donor_idx 	= donor_donations.nonzero()[0]$/;"	v
+donor_idx	t1.py	/^donor_idx 	= donor_donations.nonzero()[0]$/;"	v
+donor_idx	t2_hack.py	/^donor_idx 	= donor_donations.nonzero()[0]$/;"	v
+donor_idx	t3_autose.py	/^donor_idx 	= donor_donations.nonzero()[0]$/;"	v
+eigval	new.py	/^eigval = eigval[idx]$/;"	v
+eigvec	new.py	/^eigvec = eigvec[:,idx]$/;"	v
+eigvec	t1.py	/^eigvec = sklearn.manifold.spectral_embedding(adMat, n_components=210)$/;"	v
+eigvec	t3_autose.py	/^    eigvec = sklearn.manifold.spectral_embedding(adMat, n_components=k)$/;"	v
+g	count_donors.py	/^g = open('graph.csv', 'r')$/;"	v
+gmm	t1.py	/^gmm = GMM(n_components=2)$/;"	v
+gmm	t3_autose.py	/^    gmm = GMM(n_components=2)$/;"	v
+gmm	task2.py	/^gmm = GMM(n_components=13)$/;"	v
+gmmlabels	t1.py	/^gmmlabels = gmm.fit_predict(eigvec)$/;"	v
+gmmlabels	t3_autose.py	/^    gmmlabels = gmm.fit_predict(eigvec[:,0:k+1])$/;"	v
+graph	prunegraph2.py	/^graph = np.genfromtxt('..\/data\/graph.csv', delimiter = ',')$/;"	v
+graph	t1.py	/^graph = np.genfromtxt('..\/data\/graph.csv', delimiter = ',')$/;"	v
+graph	t2_hack.py	/^graph = np.genfromtxt('..\/data\/graph.csv', delimiter = ',')$/;"	v
+graph	t3_autose.py	/^graph = np.genfromtxt('..\/data\/graph.csv', delimiter = ',')$/;"	v
+graph_sparse	prunegraph2.py	/^graph_sparse = coo_matrix((val, (row, col)), shape=(1829,146983197))$/;"	v
+graph_sparse	prunegraph2.py	/^graph_sparse = graph_sparse.tocsr()$/;"	v
+graph_sparse	t1.py	/^graph_sparse = coo_matrix((val, (row, col)), shape=(1829,146983197))$/;"	v
+graph_sparse	t1.py	/^graph_sparse = graph_sparse.tocsr()$/;"	v
+graph_sparse	t2_hack.py	/^graph_sparse = coo_matrix((val, (row, col)), shape=(1829,146983197))$/;"	v
+graph_sparse	t2_hack.py	/^graph_sparse = graph_sparse.tocsr()$/;"	v
+graph_sparse	t3_autose.py	/^graph_sparse = coo_matrix((val, (row, col)), shape=(1829,146983197))$/;"	v
+graph_sparse	t3_autose.py	/^graph_sparse = graph_sparse.tocsr()$/;"	v
+haack	t2_hack.py	/^haack = np.array([1, 1539, 1028, 5, 1739, 1544, 684, 1111, 524, 1313, 527, 1553, 531, 1655, 533, 1558, 1559, 24, 1050, 539, 1564, 1825, 517, 33, 34, 1058, 36, 1061, 1062, 39, 1231, 860, 42, 555, 598, 946, 46, 560, 50, 1075, 53, 566, 57, 570, 59, 1084, 573, 574, 1087, 576, 1059, 1741, 1603, 1595, 1008, 1163, 1095, 1548, 586, 1099, 1622, 1102, 79, 592, 1204, 595, 1108, 597, 86, 87, 1112, 601, 90, 92, 1630, 95, 1632, 1121, 1367, 613, 102, 615, 1128, 1777, 1569, 1644, 109, 622, 1572, 112, 1640, 626, 628, 630, 119, 632, 1145, 122, 1147, 124, 639, 1154, 1643, 644, 646, 1671, 1057, 139, 140, 1165, 1166, 655, 656, 536, 1683, 1471, 1174, 152, 153, 1690, 1179, 668, 1695, 672, 1563, 1188, 1222, 678, 1649, 1192, 681, 1706, 171, 172, 177, 692, 183, 696, 185, 1055, 700, 191, 1312, 1730, 707, 197, 710, 199, 201, 1738, 631, 205, 206, 717, 1232, 888, 722, 723, 1525, 1557, 216, 1314, 1242, 219, 1244, 733, 222, 1759, 1761, 1763, 1769, 235, 1775, 753, 1781, 1780, 757, 1048, 1065, 1272, 249, 1275, 1229, 554, 254, 1645, 1793, 1283, 772, 1494, 262, 1287, 1819, 1294, 271, 272, 1810, 1748, 277, 791, 792, 281, 1306, 795, 286, 800, 801, 290, 1317, 295, 1320, 1826, 812, 1459, 1328, 1331, 1335, 312, 607, 318, 835, 1348, 1349, 838, 1400, 841, 844, 1458, 1398, 1421, 1654, 337, 1716, 1364, 1081, 856, 1631, 348, 1338, 862, 864, 1168, 571, 356, 871, 360, 1596, 1386, 364, 365, 1390, 1392, 881, 882, 1581, 1598, 886, 376, 889, 1356, 1405, 1685, 898, 747, 388, 901, 1414, 903, 1417, 1070, 1420, 397, 664, 1426, 916, 1432, 409, 413, 1590, 1093, 913, 1442, 1480, 422, 423, 941, 1456, 434, 947, 1460, 951, 440, 959, 448, 1696, 966, 968, 969, 973, 1215, 1489, 469, 982, 761, 472, 868, 1103, 988, 477, 1502, 995, 996, 999, 490, 1517, 1518, 496, 545, 1621])$/;"	v
+hinton	hinton.py	/^def hinton(W, name, maxWeight=None):$/;"	f
+idx	new.py	/^idx = np.argsort(eigval)$/;"	v
+indices	count_donors.py	/^indices = list(xrange(numProj))$/;"	v
+indices	prunegraph.py	/^indices = set(col)$/;"	v
+indices	prunegraph2.py	/^indices = list(xrange(numProj))$/;"	v
+indices	t1.py	/^indices = list(xrange(numProj))$/;"	v
+indices	t2_hack.py	/^indices = list(xrange(numProj))$/;"	v
+indices	task2.py	/^indices = list(xrange(1829))$/;"	v
+intersect	prunegraph2.py	/^def intersect(a, b):$/;"	f
+intersect	t1.py	/^def intersect(a, b):$/;"	f
+intersect	t2_hack.py	/^def intersect(a, b):$/;"	f
+intersect	t3_autose.py	/^def intersect(a, b):$/;"	f
+k_means	new.py	/^k_means = cluster.KMeans(2)$/;"	v
+k_means	t3_autose.py	/^    k_means = cluster.KMeans(2)$/;"	v
+label	a1.py	/^label = model.fit_predict(YPca)$/;"	v
+label	task2.py	/^label = gmm.fit_predict(YPca)$/;"	v
+label	task2.py	/^label = model.fit_predict(YPca)$/;"	v
+label	task2.py	/^label = sc.fit_predict(Y)$/;"	v
+lapMat	new.py	/^lapMat = np.eye(2*N+N2) - np.dot(np.dot(diagMatinv,adjMat),diagMatinv)$/;"	v
+lspl	count_donors.py	/^    lspl = line.split(',')$/;"	v
+maxdo	prunegraph.py	/^maxdo = max(sumdonor.values())$/;"	v
+model	a1.py	/^model = KMeans(n_clusters = 13)$/;"	v
+model	task2.py	/^model = KMeans(n_clusters = 13)$/;"	v
+muXPca	task2.py	/^muXPca = np.mean(YRp,0)$/;"	v
+numProj	count_donors.py	/^numProj = 1829$/;"	v
+numProj	prunegraph2.py	/^numProj = 1829$/;"	v
+numProj	t1.py	/^numProj = 1829$/;"	v
+numProj	t2_hack.py	/^numProj = 1829$/;"	v
+numProj	t3_autose.py	/^numProj = 1829$/;"	v
+out	t2_hack.py	/^out = np.ones(numProj)$/;"	v
+print_labels	task2.py	/^def print_labels(label):$/;"	f
+proj	count_donors.py	/^proj = [12,1419,865,146,1653,1176]$/;"	v
+proj	prunegraph2.py	/^proj = [12,1419,865,146,1653,1176]$/;"	v
+proj	t1.py	/^proj = [12,1419,865,146,1653,1176]$/;"	v
+proj	t3_autose.py	/^proj = [12,1419,865,146,1653,1176]$/;"	v
+project_donations	prunegraph2.py	/^project_donations 	= graph_sparse.sum(1).getA1()$/;"	v
+project_donations	t1.py	/^project_donations 	= graph_sparse.sum(1).getA1()$/;"	v
+project_donations	t2_hack.py	/^project_donations 	= graph_sparse.sum(1).getA1()$/;"	v
+project_donations	t3_autose.py	/^project_donations 	= graph_sparse.sum(1).getA1()$/;"	v
+project_idx	prunegraph2.py	/^project_idx	= np.arange(1829)$/;"	v
+project_idx	t1.py	/^project_idx	= np.arange(1829)$/;"	v
+project_idx	t2_hack.py	/^project_idx	= np.arange(1829)$/;"	v
+project_idx	t3_autose.py	/^project_idx	= np.arange(1829)$/;"	v
+pruneFl2set	t1.py	/^pruneFl2set = pruneGl2.sum(1)$/;"	v
+pruneFl2set	t2_hack.py	/^pruneFl2set = pruneGl2.sum(1)$/;"	v
+pruneFl2set	t3_autose.py	/^pruneFl2set = pruneGl2.sum(1)$/;"	v
+pruneG	prunegraph2.py	/^pruneG = graph_sparse[:,donor_idx]$/;"	v
+pruneG	prunegraph2.py	/^pruneG = pruneG.toarray()$/;"	v
+pruneG	t1.py	/^pruneG = graph_sparse[:,donor_idx]$/;"	v
+pruneG	t1.py	/^pruneG = pruneG.toarray()$/;"	v
+pruneG	t2_hack.py	/^pruneG = graph_sparse[:,donor_idx]$/;"	v
+pruneG	t2_hack.py	/^pruneG = pruneG.toarray()$/;"	v
+pruneG	t3_autose.py	/^pruneG = graph_sparse[:,donor_idx]$/;"	v
+pruneG	t3_autose.py	/^pruneG = pruneG.toarray()$/;"	v
+pruneGl2	t1.py	/^pruneGl2 = pruneG[:,pruneG.sum(0) != 1]$/;"	v
+pruneGl2	t2_hack.py	/^pruneGl2 = pruneG[:,pruneG.sum(0) != 1]$/;"	v
+pruneGl2	t3_autose.py	/^pruneGl2 = pruneG[:,pruneG.sum(0) != 1]$/;"	v
+row	a1.py	/^row = description[:,0]$/;"	v
+row	prunegraph.py	/^row = data[:,0]$/;"	v
+row	prunegraph2.py	/^row = graph[:,0]$/;"	v
+row	t1.py	/^row = graph[:,0]$/;"	v
+row	t2_hack.py	/^row = graph[:,0]$/;"	v
+row	t3_autose.py	/^row = graph[:,0]$/;"	v
+row	task2.py	/^row = description[:,0]$/;"	v
+sc	task2.py	/^sc = SC(n_clusters=13,gamma=0.25)$/;"	v
+show_graph	new.py	/^def show_graph(adjacency_matrix, labels):$/;"	f
+social	t1.py	/^social = np.genfromtxt('..\/data\/social_and_evolution.csv', delimiter = ',')$/;"	v
+social	t2_hack.py	/^social = np.genfromtxt('..\/data\/social_and_evolution.csv', delimiter = ',')$/;"	v
+social	t3_autose.py	/^social = np.genfromtxt('..\/data\/social_and_evolution.csv', delimiter = ',')$/;"	v
+spec	new.py	/^spec = cluster.SpectralClustering(2,affinity='precomputed')$/;"	v
+spec	prunegraph2.py	/^spec = cluster.SpectralClustering(2,affinity='precomputed')$/;"	v
+spec	t3_autose.py	/^    spec = cluster.SpectralClustering(2)#,affinity='precomputed')$/;"	v
+sumdonor	prunegraph.py	/^sumdonor = {}$/;"	v
+thresh	count_donors.py	/^thresh = 1$/;"	v
+thresh	new.py	/^thresh = 0.3$/;"	v
+thresh	prunegraph.py	/^thresh = 1$/;"	v
+topdonor	prunegraph.py	/^topdonor = []$/;"	v
+val	a1.py	/^val = description[:,2]$/;"	v
+val	prunegraph.py	/^val = data[:,2]$/;"	v
+val	prunegraph2.py	/^val = graph[:,2]$/;"	v
+val	t1.py	/^val = graph[:,2]$/;"	v
+val	t2_hack.py	/^val = graph[:,2]$/;"	v
+val	t3_autose.py	/^val = graph[:,2]$/;"	v
+val	task2.py	/^val = description[:,2]$/;"	v
+wXPca	task2.py	/^wXPca = wXPca[0:K,:]    # Kxd$/;"	v

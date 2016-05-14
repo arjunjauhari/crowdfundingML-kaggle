@@ -1,0 +1,27 @@
+(Pdb) np.sqrt(np.sum(np.square(pruneG[12,:]-pruneG[1419,:])))
+12.041594578792296
+(Pdb) np.sqrt(np.sum(np.square(pruneG[12,:]-pruneG[146,:])))
+10.295630140987001
+(Pdb) np.sqrt(np.sum(np.square(pruneG[12,:]-pruneG[1653,:])))
+9.1104335791442992
+(Pdb) np.sqrt(np.sum(np.square(pruneG[12,:]-pruneG[1176,:])))
+4.8989794855663558
+(Pdb) np.sqrt(np.sum(np.square(pruneG[12,:]-pruneG[865,:])))
+25.651510676761319
+
+
+subtraction/rbf is only capturing the number of different donors between the two projects. Hence it creates a huge gap between two projects where one has less donors and other has high eg. 12 and 1419 pair
+
+(Pdb) p project_donations[12]
+7.0
+(Pdb) p project_donations[1419]
+138.0
+(Pdb) p project_donations[865]
+651.0
+(Pdb) p project_donations[146]
+99.0
+(Pdb) p project_donations[1653]
+76.0
+(Pdb) p project_donations[1176]
+17.0
+

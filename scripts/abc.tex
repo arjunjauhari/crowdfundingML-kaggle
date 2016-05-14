@@ -1,0 +1,153 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath, amssymb, amsthm, graphicx, float}
+\usepackage{subfig, subfloat}
+\allowdisplaybreaks
+
+\title{Competition 1 Report}
+\author{Kaggle Team Name: DataDetectives \\ Siva Sankalp Patel(sp2337) \\ Arjun Jauhari(aj526) \\ David Vakili(dv227)}
+\date{8 May 2016}
+
+\begin{document}
+
+\maketitle
+
+\section*{Introduction}
+The report is organized into two sections - Task 1 and Task 2. For task 1, the best performing method is method 5. Whereas, for task 2, the best performing method is method 6. \\
+\\
+All of our methods were implemented in Python using the scikit-learn package (version 0.17.1). 
+ \\
+
+\section*{Task 1}
+\subsection*{Method 1 - All projects are labeled successful}
+We made a submission with all predictions set to 1 to see how many of the projects were actually successful. Although we expected the score to be around 47 \% - 53 \%, the score was actually ~59\% which means the no. of successful and unsuccessful projects are not really equal. \\
+Takeaways:\\
+\vspace{-0.5cm}
+\begin{itemize}
+\item No. of successful projects is around 58\%
+\end{itemize}
+\section*{Method 2 - KMeans on social and evolution data}
+Next, we tried a simple KMeans on the social data with random initialization. We got an accuracy of about ~52\%. The reason behind this was the assumption that successful projects may have similar social media response. \\
+Takeaways:\\
+\vspace{-0.5cm}
+\begin{itemize}
+\item It seems like the assumption was not correct for this dataset.
+\end{itemize}
+
+\section*{Method 3 - Graph donor threshold}
+We then counted the number of donors each project had from the backer network. Then we thresholded it at different values. We observed the following: \\
+\begin{itemize}
+\item No. of successful projects is around 58\%
+\end{itemize}
+
+Threshold 40 - 53.063%
+Threshold 30 - 53.829%
+Threshold 20 - 54.705%
+Threshold 1 - 58.096%
+Takeaways:
+A few important things we learnt from this experiment is that there is no direct correlation between the number of donors a project had and whether it was successful. 
+There are a few projects that were successful even with a single donor. 
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=6cm]{w1.png}
+\caption{Gibbs Sampler Updates}
+\label{fig1:Gibbs Sampler}
+\end{figure}
+
+Conventional Gibbs Sampling starts with random initial vector and element wise 
+update is done. Updates are done by sampling the distribution as shown in Figure 1.
+Symbol vector is updated iteratively and it is guaranteed to converge but can take
+infinite many iterations. In practical scenarios we generally stop after a fixed
+number of iterations and hope that chain has mixed(converge). However, there can
+be cases where chain gets trapped in some low transition probability state and
+takes many iteration to come out. Such cases cause Stalling Problem which degrades
+Conventional Gibbs sampler performance at high SNR. Figure 2 below shows this problem.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=10cm]{w2.png}
+\caption{Stalling Problem}
+\label{fig2:Stalling Problem}
+\end{figure}
+
+\section*{Algorithm}
+\subsection*{Mixed Gibbs Sampling}
+At each co-ordinate update, instead of updating $x_i$ with probability 1 
+as done in conventional Gibbs sampling, update with probability $1-q$ and
+use different update rule with probability $q$. The mixed distribution is -
+\begin{equation*}
+\begin{split}
+    &p(x_1,...,x_{2K}|\mathbf{y},\mathbf{H}) \propto (1-q)\psi(\alpha_1) + q\psi(\alpha_2)\\
+    &\psi(\alpha) = exp({ -||\mathbf{y - Hx}|| }^2/\alpha^2\sigma^2)\\
+\end{split}
+\end{equation*}
+$\alpha_1$ and $\alpha_2$ are chosen as 1 and $\infty$ respectively.
+
+\begin{figure}[h]
+\centering
+\subfloat[MGS\label{fig3:MGS}]{%
+\includegraphics[width=8cm]{w3.png}
+}~
+\subfloat[MGS-MR\label{fig3:mgs_mr}]{%
+\includegraphics[width=7cm]{w4.png}
+}%
+\caption{}
+\end{figure}
+
+Figure 3a shows how Mixed Gibbs Sampling can reach ML cost in many intermediate
+iterations but conventional Gibbs Sampling remain stalled at some high loss state.
+Therefore MGS can achieve near optimal performance. \\
+But BER degrades as the QAM size increases and MGS is far from optimal performance 
+for 16-QAM and 64-QAM. This happens because search space increases exponentially with
+constellation size and therefore probability to converge to right solution is low.
+
+\subsection*{Mixed Gibbs Sampling-Multiple Restart}
+To get around the above mentioned problem, mutliple restarts are used. Multiple
+Restarts is equivalent to running multiple Gibbs Sampler parallely with different
+initial vector. Figure 3b shows that if we run multiple gibbs sampler with different
+initial vector the probability that one of them will converge is fairly high.\\
+Figure 4 compares the performance of MGS and MGS-MR for 16-QAM. As can be seen that
+MGS-MR alleviates the problem faced by MGS for higher QAM.\\
+\begin{figure}[h]
+\centering
+\subfloat[MGS vs MGS-MR for 16-QAM\label{fig4:comparison}]{%
+\includegraphics[width=8cm]{r3.png}
+}~
+\subfloat[MGS-MR\label{fig4:complex}]{%
+\includegraphics[width=8cm]{c3.png}
+}%
+\caption{}
+\end{figure}
+
+\section*{Results}
+\begin{figure}[H]
+\centering
+\includegraphics[width=12cm]{r4.png}
+\caption{MT=8,MR=8 - QPSK}
+\label{fig5:Stalling Problem}
+\end{figure}
+\begin{figure}[H]
+\centering
+\includegraphics[width=14cm]{r5.png}
+\caption{MT=8,MR=16 - QPSK}
+\label{fig6:Stalling Problem}
+\end{figure}
+\begin{figure}[H]
+\centering
+\includegraphics[width=14cm]{r6.png}
+\caption{MT=32,MR=32 - QPSK}
+\label{fig7:Stalling Problem}
+\end{figure}
+
+\section*{Conclusion}
+We implemented the algorithm proposed successfully and demonstrated its performance
+under various combination of Transmit and Recieve Antennae. We also estimated the
+complexity of the algorithm and it is seen that the complexity is of the order $10^7$
+We also studied the problem encountered by MGS algorithm for higher QAMs and 
+implemented MGS-MR to see if it improves the performance as claimed by author.\\
+\section*{References}
+[1] Tanumay Datta et al., A Novel Monte-Carlo-Sampling-Based Receiver 
+for Large-Scale Uplink Multiuser MIMO Systems \\
+\end{document}
