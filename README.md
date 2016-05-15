@@ -8,13 +8,14 @@ Introduction
 
 The report is organized into two sections - Task 1 and Task 2. For task
 1, the best performing method is method 5. Whereas, for task 2, the best
-performing method is method 6.\
-\
+performing method is method 6.
 All of our methods were implemented in Python using the scikit-learn
-package (version 0.17.1).\
+package (version 0.17.1).
 
 Task 1
 ======
+## TODO
+Predict which projects were successful and which were not.
 
 Method 1 - All projects are labeled successful
 ----------------------------------------------
@@ -22,8 +23,7 @@ Method 1 - All projects are labeled successful
 We made a submission with all predictions set to 1 to see how many of
 the projects were actually successful. Although we expected the score to
 be around 47 % - 53 %, the score was actually  59% which means the no.
-of successful and unsuccessful projects are not really equal.\
-\
+of successful and unsuccessful projects are not really equal.
 
 -   No. of successful projects is around 58%
 
@@ -33,8 +33,7 @@ Method 2 - KMeans on social and evolution data
 Next, we tried a simple KMeans on the social data with random
 initialization. We got an accuracy of about  52%. The reason behind this
 was the assumption that successful projects may have similar social
-media response.\
-\
+media response.
 
 -   It seems like the assumption was not correct for this dataset.
 
@@ -43,7 +42,7 @@ Method 3 - Graph donor threshold
 
 We then counted the number of donors each project had from the backer
 network. Then we thresholded it at different values. We observed the
-following:\
+following:
 
 -   Threshold 40 - 53.063%
 
@@ -53,7 +52,6 @@ following:\
 
 -   Threshold 1 - 58.096%
 
-\
 
 -   A few important things we learnt from this experiment is that there
     is no direct correlation between the number of donors a project had
@@ -69,8 +67,7 @@ wonder why they were even there in the first place). This resulted in a
 lesser sparse graph of size 1829 x 289344. This means there were 289344
 unique donors and 368586 donations. We then performed random projection
 on this graph to 300 dimensions. This was followed by performing
-spectral clustering using the RBF kernel. We got a score of about  51%.\
-\
+spectral clustering using the RBF kernel. We got a score of about  51%.
 
 -   We did not try projecting it to other dimensions. This was an early
     attempt to see if Random Projection can give some decent results. We
@@ -164,8 +161,6 @@ Method 5 (Best Performing) - Similarity matrices on graph + Spectral clustering
     we flipped the initial centroids and it gave us the exact accuracy
     we expected, i.e.,  60%.
 
-\
-
 We think that this is the right direction for this task but there are
 lot of parameters to tune for it get the best accuracy. We learned that
 for any model to work properly, tuning parameters is both important and
@@ -186,8 +181,10 @@ can take it out of that local minima:
 
 Task 2
 ======
+## TODO
+Predict the category of each project. There are 13 categories.
 
-All the methods on task 2 are performed on the description data.\
+All the methods on task 2 are performed on the description data file.
 
 Method 1 - PCA + Spectral clustering
 ------------------------------------
@@ -195,8 +192,8 @@ Method 1 - PCA + Spectral clustering
 We performed PCA on the description data by calculating the top 1200
 eigenvectors using SVD. This was followed by spectral clustering using
 the RBF kernel. We tried two different gamma values for the RBF kernel
-(1 and 0.2). The gamma value of 0.2 yielded a score of  16.5%.\
-\
+(1 and 0.2). The gamma value of 0.2 yielded a score of  16.5%.
+
 
 -   PCA may not really work well on sparse matrices.
 
